@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orkhon Empathy Schools Red Cross Youth Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const formValues = Object.fromEntries(formData.entries());
+
+            // Create email body
+            const subject = encodeURIComponent("New Red Cross Youth Club Application");
+            const body = encodeURIComponent(
+                "New Application Details:\n\n" +
+                "Name: " + formValues.name + "\n" +
+                "Email: " + formValues.email + "\n" +
+                "Age: " + formValues.age + "\n" +
+                "Grade/Year: " + formValues.grade + "\n" +
+                "Phone: " + formValues.phone + "\n\n" +
+                "Why they want to join: \n" + formValues.interests
+            );
+
+            // Open email client with pre-filled data
+            window.location.href = `mailto:anujingunchee@gmail.com?subject=${subject}&body=${body}`;
+
+            // Show confirmation message
+            alert("Thank you for your application! Your information has been sent to our administrators.");
+
+            // Reset the form
+            event.target.reset();
+        }
+
+        // Add event listener when the page loads
+        window.addEventListener('load', function() {
+            document.getElementById('application-form').addEventListener('submit', handleFormSubmit);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo2.png" id="logo" alt="Red Cross Youth Club Logo">
+        <h1>Orkhon Empathy Schools Red Cross Youth Club</h1>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#activities-showcase">Activities</a>
+            <a href="#application">Join Us</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <div class="red-cross-banner">
+            <p>Humanity • Impartiality • Neutrality • Independence • Voluntary Service • Unity • Universality</p>
+        </div>
+        <section id="about">
+            <h2>About Our Club</h2>
+            <div class="red-cross-emblem"></div>
+            <p class="mission-statement">The Orkhon Empathy Schools Red Cross Youth Club is dedicated to promoting humanitarian values and developing leadership skills among young people.</p>
+            <div class="club-info">
+                <div class="club-description">
+                    <p>Our youth club is part of the worldwide Red Cross movement, focusing on humanitarian education, community service, and personal development. We believe in the power of young people to make positive changes in their communities.</p>
+                    <p>Our members participate in various activities including first aid training, community outreach, disaster preparedness education, and humanitarian projects that benefit vulnerable populations.</p>
+                </div>            
+            </div>
+        </section>
+
+        <section id="activities-showcase">
+            <h2>Our Activities</h2>
+            <div class="activities-gallery">
+                <div class="activity-card">
+                    <img src="./image/surgalt.jpg" alt="First Aid Training" class="activity-photo">
+                    <h3>First Aid Training</h3>
+                </div>
+                <div class="activity-card">
+                    <img src="./image/handiv.jpg" alt="Community Outreach" class="activity-photo">
+                    <h3>Community Outreach</h3>
+                </div>
+                <div class="activity-card">
+                    <img src="./image/gamshig.jpg" alt="Disaster Preparedness" class="activity-photo">
+                    <h3>Disaster Preparedness</h3>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="application">
+            <h2>Member Application</h2>
+            <div class="application-container">
+                <div class="application-info">
+                    <h3>Join Our Club</h3>
+                    <p>Becoming a member of our Red Cross Youth Club offers you the opportunity to make a positive impact in your community while developing valuable skills and making new friends.</p>
+                    <p>Fill out the form to apply for membership today!</p>
+                    <p>As a member, you will:</p>
+                    <ul>
+                        <li>Learn essential first aid skills</li>
+                        <li>Participate in humanitarian projects</li>
+                        <li>Develop leadership abilities</li>
+                        <li>Make friends who share your values</li>
+                        <li>Receive certificates for your volunteer work</li>
+                    </ul>
+                </div>
+                <div class="application-form-container">
+                    <form id="application-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="12" max="25" required>
+
+                        <label for="grade">Grade/Year:</label>
+                        <input type="text" id="grade" name="grade" required>
+
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+
+                        <label for="interests">Why do you want to join our club?</label>
+                        <textarea id="interests" name="interests" rows="4" required></textarea>
+
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="red-cross-emblem"></div>
+        <p>&copy; 2025 Orkhon Empathy Schools Red Cross Youth Club</p>
+        <p>Contact us at: <a href="mailto:anujingunchee@gmail.com">anujingunchee@gmail.com</a></p>
+        <p>Follow us on Instagram: <a href="https://www.instagram.com/redcross_oes/?hl=en" target="_blank">redcross_oes</a></p>
+    </footer>
+</html>
+
+

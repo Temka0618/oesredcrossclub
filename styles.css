@@ -1,0 +1,432 @@
+/* Global Styles */
+:root {
+    --primary-red: #e41e26;
+    --secondary-red: #c41c23;
+    --dark-gray: #333333;
+    --light-gray: #f5f5f5;
+    --medium-gray: #dddddd;
+    --white: #ffffff;
+}
+
+/* Activities List Styles */
+.activities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.activity-item {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 1.5rem;
+    min-width: 120px;
+    text-align: center;
+}
+
+.month {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.day {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+.year {
+    font-size: 1.2rem;
+}
+
+.activity-details {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.activity-details h3 {
+    color: var(--primary-red);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.activity-time, .activity-location {
+    margin-bottom: 0.5rem;
+    color: var(--dark-gray);
+}
+
+.activity-description {
+    margin-bottom: 1.5rem;
+}
+
+.register-btn {
+    display: inline-block;
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+    background-color: var(--secondary-red);
+}
+
+/* Past Activities Styles */
+.activity-content {
+    padding: 1rem;
+}
+
+.activity-date-small {
+    color: var(--primary-red);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--white);
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    background-color: var(--light-gray);
+    border-radius: 4px;
+    width: 100%;
+}
+
+nav a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--primary-red);
+    color: var(--white);
+}
+
+/* Make sure header elements are properly aligned */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 1rem 0;
+    color: var(--primary-red);
+    text-align: center;
+}
+
+#logo {
+    max-width: 200px;
+    height: auto;
+}
+
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    color: var(--primary-red);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-red);
+}
+
+h3 {
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+}
+
+/* About Section */
+.club-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.club-description {
+    max-width: 800px;
+    text-align: center;
+}
+
+.club-description p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Activities Section */
+.activities-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.activity-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.activity-card h3 {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--primary-red);
+    color: var(--white);
+}
+
+/* Application Section */
+.application-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.application-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.application-info h3 {
+    color: var(--primary-red);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.application-info p {
+    margin-bottom: 1rem;
+}
+
+.application-form-container {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 2px rgba(228, 30, 38, 0.2);
+}
+
+.submit-btn {
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-red);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 1rem;
+}
+
+.contact-info a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.contact-info a:hover {
+    color: var(--medium-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .application-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.3rem 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .activity-item {
+        flex-direction: column;
+    }
+
+    .activity-date {
+        flex-direction: row;
+        padding: 0.8rem;
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .month, .day, .year {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+}
+
+
+/* Additional Red Cross specific styling */
+.red-cross-banner {
+    background-color: var(--primary-red);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+.mission-statement {
+    font-style: italic;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: var(--dark-gray);
+    font-size: 1.2rem;
+}
+
+/* Add a red cross emblem effect */
+.red-cross-emblem {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+}
+
+.red-cross-emblem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-red);
+    border-radius: 4px;
+}
+
+.red-cross-emblem::after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
